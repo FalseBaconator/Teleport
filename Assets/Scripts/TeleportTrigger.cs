@@ -11,11 +11,11 @@ public class TeleportTrigger : MonoBehaviour
     {
         if(other.tag == PlayerTag)
         {
-            Debug.Log("Before|| Target: " + target.position + " Player: " + other.transform.position);
+            //Debug.Log("Before|| Target: " + target.position + " Player: " + other.transform.position);
             other.GetComponent<CharacterController>().enabled = false;
             other.transform.position = target.position;
             other.GetComponent<CharacterController>().enabled = true; 
-            Debug.Log("After|| Target: " + target.position + " Player: " + other.transform.position);
+            //Debug.Log("After|| Target: " + target.position + " Player: " + other.transform.position);
         }
     }
 
