@@ -19,6 +19,7 @@ public class PlayerTeleport : MonoBehaviour
         {
             Vector3 toMove = target.position - transform.position;
             GetComponent<CharacterController>().Move(toMove);
+            GetComponent<CharacterController>().SimpleMove(Vector3.zero);
         }
     }
 }

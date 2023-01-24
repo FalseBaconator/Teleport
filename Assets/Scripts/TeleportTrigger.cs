@@ -24,6 +24,7 @@ public class TeleportTrigger : MonoBehaviour
             Vector3 toMove = target.position - player.transform.position;
             Debug.Log(toMove.magnitude + "||" + Time.time);
             player.GetComponent<CharacterController>().Move(toMove);
+            player.GetComponent<CharacterController>().SimpleMove(Vector3.zero);
 
             //Debug.Log("After|| Target: " + target.position + " Player: " + other.transform.position);
         }
